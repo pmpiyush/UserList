@@ -1,0 +1,116 @@
+/* Apply basic styles to the User List container */
+#usersList {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Style for each user item */
+#usersList div {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the "Delete" button */
+#usersList button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Style the "Delete" button on hover */
+#usersList button:hover {
+    background-color: #ff4f4f;
+}
+
+/* Style the "Add User" form */
+#addUserForm {
+    margin: 10px 0;
+}
+
+/* Style the "Add User" button */
+#addUserForm button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Style the "Add User" button on hover */
+#addUserForm button:hover {
+    background-color: #45a049;
+}
+
+/* Style the search input */
+#search {
+    width: 100%;
+    padding: 5px; /* Reduce padding to make it smaller */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style the pagination controls */
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pagination button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#pagination button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Improved styles for the "User List" heading */
+h1 {
+    text-align: center;
+    color: #3498db;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Adjust styles for the overall container */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Adjust styles for the form label */
+label {
+    font-weight: bold;
+    margin-right: 5px;
+}

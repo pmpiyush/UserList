@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>User List</h1>
+    
+    <!-- Add User Form -->
+    <form id="addUserForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Add User</button>
+    </form>
+    
+    <!-- Search User -->
+    <input type="text" id="search" placeholder="Search by name" onkeyup="searchUsers()">
+    
+    <!-- User List Container -->
+    <div id="usersList"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,12 +1,12 @@
-// Initialize users array from local storage or use an empty array if no data is stored
+// local storage
 let users = JSON.parse(localStorage.getItem('users')) || [];
 
-// Function to save users to local storage
+// save users to local 
 function saveUsersToLocalStorage() {
     localStorage.setItem('users', JSON.stringify(users));
 }
 
-// Function to display users from local storage
+// displays users from local
 function displayUsersFromLocalStorage() {
     const userListDiv = document.querySelector('#usersList');
     userListDiv.innerHTML = ''; // Clear the existing list
@@ -22,12 +22,11 @@ function displayUsersFromLocalStorage() {
     });
 }
 
-// Function to generate a unique ID (for demonstration purposes)
 function generateUniqueId() {
     return Math.floor(Math.random() * 1000); // Generate a random number
 }
 
-// Function to display users
+// displays users
 function displayUsers(users) {
     const userListDiv = document.querySelector('#usersList');
     userListDiv.innerHTML = ''; // Clear the existing list
@@ -43,27 +42,27 @@ function displayUsers(users) {
     });
 }
 
-// Function to add a new user
+// new user added from this function
 function addUser(name) {
     const newUser = { id: generateUniqueId(), name: name };
     users.push(newUser);
     modifyUsers(users);
 }
 
-// Function to delete a user by ID
+// user can be deleted by th ehelp of id
 function deleteUser(userId) {
     users = users.filter((user) => user.id !== userId);
     modifyUsers(users);
 }
 
-// Function to search users
+// search user function
 function searchUsers() {
     const searchInput = document.querySelector('#search').value.toLowerCase();
     const filteredUsers = users.filter((user) => user.name.toLowerCase().includes(searchInput));
     displayUsers(filteredUsers);
 }
 
-// Event listener for the form submission to add a user
+// add a user
 const addUserForm = document.querySelector('#addUserForm');
 addUserForm.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -75,17 +74,17 @@ addUserForm.addEventListener('submit', function (e) {
     }
 });
 
-// When the page loads, display users from local storage
+// display list of user from local
 window.addEventListener('load', () => {
     displayUsersFromLocalStorage();
 });
 
-// When users are modified (added or deleted), save them to local storage
+// saves user after deleting in local
 function handleUserModification() {
     saveUsersToLocalStorage();
 }
 
-// Call this function whenever users are modified
+
 function modifyUsers(users) {
     displayUsers(users);
     handleUserModification();
